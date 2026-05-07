@@ -1,0 +1,30 @@
+Explanation
+
+no microphone sir
+
+
+Object-Oriented Programming Concepts Used are objects, encapsulation, abstraction, inheritance and polymorphism
+
+ Classes and Objects
+For classes we used CultivationAdventureApp, StoryPage, and StoryBrain as class that acts as a blueprint, while an object is an instance of that class.
+For example, `StoryBrain storyBrain = StoryBrain();` creates an object that manages the story flow of the game.
+
+ Encapsulation
+We used encapsulation logic to separate the `StoryBrain` class instead of placing everything directly in the UI code.
+This keeps the story data, choices, scene changes, and ending logic organized in one place.
+The `StoryPage` only calls methods such as `getStoryText()`, `getChoices()`, `nextScene()`, and `restart()` without needing to directly manage all story details.
+
+Abstraction
+The program hides complex story navigation behind simple method calls using Abstraction.
+For example, when the player selects a choice,
+the UI only calls `storyBrain.nextScene(index)`. The internal logic of which scene comes next is handled inside `StoryBrain`.
+
+Inheritance
+The Flutter widgets demonstrate inheritance. `CultivationAdventureApp` extends `StatelessWidget`, while `StoryPage` extends `StatefulWidget`.
+This means these classes inherit Flutter widget behavior and customize it by overriding the `build()` method.
+
+Polymorphism
+Polymorphism is shown through method overriding.
+The `build()` method is overridden in both `CultivationAdventureApp` and `_StoryPageState` to provide different user interfaces while following Flutter’s widget structure.
+
+the OOP concept helped us make the project organized, reusable, and easier to maintain by separating the user interface, story logic, and audio functionality into different classes and methods.
